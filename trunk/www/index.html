@@ -6,9 +6,50 @@
 
 <body bgcolor="#FFFFFF" text="#000000">
 
-<p>Welcome to the Web Application Description Language (WADL) project at Java.net. This project is under the <a href="http://www.opensource.org/licenses/cddl1.php">CDDL license</a>. Here you'll find the language specification and tools for working with WADL descriptions of Web applications.</p>
+<p>Welcome to the Web Application Description Language (WADL) project at Java.net. This project is under the <a href="http://www.opensource.org/licenses/cddl1.php">CDDL license</a>. Here you'll find the <a href="#spec">language specification</a> and tools for working with WADL descriptions of Web applications.</p>
 
-<h2>Specification</h2>
+<p>Currently available code:</p>
+
+<dl>
+<dt><code>wadl2java</code></dt><dd>A tool that generates client side stubs from WADL files. May be used from the command line or as an Apache Ant plug-in, see the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for full details.</dd>
+<dt><code>wadl2java_yahoo</code></dt><dd>A sample project that uses the <code>wadl2java</code> tool to create stubs for the <a href="http://developer.yahoo.com/search/news/V1/newsSearch.html">Yahoo News Search Service</a>. Includes a simple <code>main</code> method that uses the generated stubs to query for the latest Java news.</dd>
+</dl>
+
+<h2>Project Goals</h2>
+
+<p>This project aims to accomplish the following:</p>
+
+<ul>
+<li>Improve the existing <code>wadl2java</code> tool</li>
+<li>Collect a library of WADL files for existing Web applications, these will serve to:
+<ul>
+<li>Demonstrate the use of WADL to describe existing services</li>
+<li>Provide test files for WADL tools</li>
+</ul></li>
+<li>Add new tools for languages other than Java</li>
+<li>Add new tools for developing server-side code from WADL descriptions</li>
+<li>Add new tools for creating WADL descriptions of deployed services</li>
+<li>Integration of existing and new tools into IDEs and application servers to simplify their use</li>
+</ul>
+
+<h2>Contributing to the Project</h2>
+
+<p>Contributions are welcome in the following areas:</p>
+
+<ul>
+<li>Suggestions for improvements to the current tools. These can be in the form of:
+<ul>
+<li>Bug reports</li>
+<li>Feature requests</li>
+<li>Source code patches</li>
+</ul></li>
+<li>Suggestions for improvements to the WADL specification</li>
+<li>Submission of WADL files for existing Web applications</li>
+<li>Submission of new tools</li>
+<li>Documentation or tutorials on the use of WADL or the tools under development here.<li>
+</ul>
+
+<h2 id="spec">WADL Specification</h2>
 
 <p>History (current specification at top):</p>
 
@@ -37,43 +78,6 @@ $ ant jar</pre>
 $ ant run</pre>
 
 <p>You should see a list of recent news stories related to Java. Take a look at <code>build.xml</code> to see how to use the <code>wadl2java</code> Ant plug-in.</p>
-
-<!--
-<p>Congratulations on your new java.net project! </p>
-<p>This page is the home page for your new project. This content is appearing 
-  because you have selected the option <b>Use project index.html</b>. To edit 
-  the information displayed on this page, just use CVS to check out your project's 
-  CVS repository and edit index.html in directory www. You can get more information 
-  on how to set-up your local CVS client, click on <b>Version Control</b> on the 
-  left nav bar. </p>
-<p>If you don't want to use CVS to manage your home page, click on the <b>Edit 
-  project</b> link on this page and unclick the option <b>Use project index.html</b>. 
-  Your project home page contents will be generated from the <b>Edit project</b> 
-  field <b>Description</b>. Edit the text on that field to change your home page 
-  contents. Click on <b>Submit changes</b> to save your edits. </p>
-<p>If you are looking for <a href="https://java-net.dev.java.net/ProjectPages.html#templates">sample 
-  home page templates</a>, check out the <a href="https://java-net.dev.java.net/ProjectPages.html">java.net 
-  Project Starter Kit</a>. Copy either of the templates into your project's html 
-  to get started on your project's home page. </p>
-<p>You can find lots of helpful information in the Starter Kit to get your project 
-  started. Some of the things you will find in there include:</p>
-<ul>
-  <li>Hints on how to <a href="https://java-net.dev.java.net/ProjectPages.html#pages">set-up 
-    your project's</a> home page</li>
-  <li>Ideas on how to <a href="https://java-net.dev.java.net/ProjectPages.html#publicity">publicize 
-    your project</a> including RSS feeds</li>
-  <li>Hints on <a href="https://java-net.dev.java.net/pagedesign.html">project 
-    page HTML</a></li>
-  <li>Setting up project <a href="https://java-net.dev.java.net/ProjectPages.html#wiki">wiki 
-    pages</a></li>
-  <li>And places to go if <a href="https://java-net.dev.java.net/ProjectPages.html#feedback">you 
-    have questions</a>.</li>
-</ul>
-<p>Remember that you will attract more new members and your project team will 
-  work more effectively if you, as the project owner, supply sufficient information 
-  about your project for visitors to your project space. Good luck with your new 
-  project! </p>
--->
 
 </body>
 </html>
