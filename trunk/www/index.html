@@ -11,7 +11,24 @@
 
 <h2>Build Instructions</h2>
 
-<p>You need Apache Ant 1.6 or later to build the code contained within this project. Java SE 5 or later is required.</p>
+<img src="built-for-netbeans.png" style="float:right" />
+<p>You need Apache Ant 1.6 or later to build the code contained within this project. Java SE 5 or later is required. First check out the workspace:</p>
+
+<pre>$ svn checkout https://wadl.dev.java.net/svn/wadl/trunk/source wadl --username <i>yourid</i></pre>
+
+<p>Go to the <code>wadl4java</code> directory and build the project:</p>
+
+<pre>$ cd wadl/source/wadl2java
+$ ant dist</pre>
+
+<p>The project also comes with <a href="http://www.netbeans.org/">NetBeans</a> project files, if you use other IDEs, please contribute the project settings to us.</p>
+
+<p>Once built, you can test using a sample project:</p>
+
+<pre>$ cd ../wadl2java_yahoo
+$ ant run</pre>
+
+<p>You should see a list of recent news stories related to Java. Take a look at <code>build.xml</code> to see how to use the <code>wadl2java</code> Ant plug-in.</p>
 
 <!--
 <p>Congratulations on your new java.net project! </p>
