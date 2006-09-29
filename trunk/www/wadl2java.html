@@ -41,14 +41,14 @@
 <p>Include <code>wadl2java</code> as a build step in an Apache Ant build script as follows:</p>
 
 <pre>
-&lt;property name="wadl2java.dist"
-    value="path/to/wadl2java/dist" /&gt;
+&lt;property name="wadl2java.project"
+    value="path/to/wadl2java" /&gt;
     
 &lt;taskdef name="wjc" 
     classname="com.sun.research.ws.wadl2java.WJCTask"&gt;
   &lt;classpath&gt;
-    &lt;fileset dir="${wadl2java.dist}" includes="lib/*.jar" /&gt;
-    &lt;pathelement location="${wadl2java.dist}/wadl2java.jar"/&gt;
+    &lt;fileset dir="${wadl2java.project}/lib" includes="*.jar" /&gt;
+    &lt;pathelement location="${wadl2java.project}/dist/wadl2java.jar"/&gt;
   &lt;/classpath&gt;
 &lt;/taskdef&gt;
 
@@ -58,7 +58,7 @@
     &lt;produces dir="<i>outputDir</i>" includes="**/*.java" /&gt;
     &lt;depends dir="." includes="*.xsd"/&gt;
     &lt;depends dir="." includes="build.xml"/&gt;
-    &lt;depends dir="${wadl2java.dist}" includes="wadl2java.jar"/&gt;
+    &lt;depends dir="${wadl2java.project}" includes="wadl2java.jar"/&gt;
   &lt;/wjc&gt;
 &lt;/target&gt;
 </pre>
