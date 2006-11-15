@@ -8,11 +8,16 @@
 
 <p>Welcome to the Web Application Description Language (WADL) project at Java.net. This project is under the <a href="http://www.opensource.org/licenses/cddl1.php">CDDL license</a>. Here you'll find the <a href="#spec">language specification</a> and tools for working with WADL descriptions of Web applications.</p>
 
-<p>Currently available code:</p>
+<h2>Project Contents</h2>
 
 <dl>
 <dt><code>wadl2java</code></dt><dd>A tool that generates client side stubs from WADL files. May be used from the command line or as an Apache Ant plug-in, see the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for full details.</dd>
 <dt><code>wadl2java_yahoo</code></dt><dd>A sample project that uses the <code>wadl2java</code> tool to create stubs for the <a href="http://developer.yahoo.com/search/news/V1/newsSearch.html">Yahoo News Search Service</a>. Includes a simple <code>main</code> method that uses the generated stubs to query for the latest Java news.</dd>
+</dl>
+
+<h3>Other Resources</h3>
+<dl>
+<dt><code>wadl_documentation.xsl</code></dt><dd>Mark Nottingham maintains an <a href="http://www.mnot.net/webdesc/">XSLT stylesheet</a> that will transform a WADL document into a human-readable documentation.</dd>
 </dl>
 
 <h2 id="wadlgoals">Project Goals</h2>
@@ -54,12 +59,13 @@
 <p>History (current specification at top):</p>
 
 <ul>
-<li>20061109 - <a href="wadl20061109.pdf">Specification</a>, <a href="wadl20061109.rnc">RelaxNG schema</a> and <a href="wadl20061109.xsd">W3C XML schema</a>. Updated with support for resource type and numerous fixes and clarifications, more <a href="https://wadl.dev.java.net/servlets/NewsItemView?newsItemID=4364">information here</a>.</li>
-<li>20060802 - <a href="wadl20060802.pdf">Specification</a>, <a href="wadl20060802.rnc">RelaxNG schema</a> and <a href="wadl20060802.xsd">W3C XML schema</a>. Updated with support for describing links from representations to resources, including human-readable documentation and reworked resource and parameter description, see <a href="http://weblogs.java.net/blog/mhadley/archive/2006/08/wadl_revision_1.html">Marc's blog entry for details</a>.</li>
+<li>20061109 - <a href="wadl20061109.pdf">Specification</a> (PDF), <a href="wadl20061109.rnc">RelaxNG schema</a> and <a href="wadl20061109.xsd">W3C XML schema</a>. Updated with support for resource type and numerous fixes and clarifications, more <a href="https://wadl.dev.java.net/servlets/NewsItemView?newsItemID=4364">information here</a>.</li>
+<li>20060802 - <a href="wadl20060802.pdf">Specification</a> (PDF), <a href="wadl20060802.rnc">RelaxNG schema</a> and <a href="wadl20060802.xsd">W3C XML schema</a>. Updated with support for describing links from representations to resources, including human-readable documentation and reworked resource and parameter description, see <a href="http://weblogs.java.net/blog/mhadley/archive/2006/08/wadl_revision_1.html">Marc's blog entry for details</a>.</li>
 <li>20060424 - <a href="http://research.sun.com/techrep/2006/abstract-153.html">Sun Labs Technical Report</a>
+<li>20051116 - <a href="wadl20051116.pdf">Initial draft</a> (PDF)
 </ul>
 
-<h2 id="wadlbuild">Build Instructions</h2>
+<h2 id="wadlbuild">Project Build Instructions</h2>
 
 <img src="built-for-netbeans.png" style="float:right" />
 <p>You need Apache Ant 1.6 or later to build the code contained within this project. Java SE 5 or later is required. First check out the workspace:</p>
