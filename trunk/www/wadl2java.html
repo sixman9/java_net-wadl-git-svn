@@ -17,7 +17,7 @@
 
 <p>Execute the <code>wadl2java</code> tools as follows:</p>
 
-<pre>java -jar wadl2java.jar -o <i>outputDir</i> -p <i>package</i> <i>file.wadl</i></pre>
+<pre>java -jar wadl2java.jar -o <i>outputDir</i> -p <i>package</i> [-c <i>customization</i>]* <i>file.wadl</i></pre>
 
 <p>where:</p>
 
@@ -26,6 +26,8 @@
 <dd>specifies the directory into which generated source code will be written, the directory must already exist</dd>
 <dt><code><i>package</i></code></dt>
 <dd>specifies the Java package name in which generated code will reside</dd>
+<dt><code><i>customization</i></code></dt>
+<dd>is the path or URL of a JAXB binding customization file (zero or more customization files can be specified)</dd>
 <dt><code><i>file.wadl</i></code></dt>
 <dd>is the path or URL of the WADL file to process</dd>
 </dl>
@@ -55,6 +57,7 @@
 &lt;target name="-pre-compile"&gt;
   &lt;echo message="Compiling the description..." /&gt;
   &lt;wjc description="<i>file.wadl</i>" package="<i>package</i>" target="<i>outputDir</i>"&gt;
+    &lt;customizations dir="<i>.</i>" includes="<i>customization</i>" /&gt;
     &lt;produces dir="<i>outputDir</i>" includes="**/*.java" /&gt;
     &lt;depends dir="." includes="*.xsd"/&gt;
     &lt;depends dir="." includes="build.xml"/&gt;
@@ -63,9 +66,9 @@
 &lt;/target&gt;
 </pre>
 
-<p>where <code><i>outputDir</i></code>, <code><i>package</i></code> and <code><i>file.wadl</i></code> are as <a href="#commandline">specified above</a>.<p>
+<p>where <code><i>outputDir</i></code>, <code><i>package</i></code>, <code><i>customization</i></code> and <code><i>file.wadl</i></code> are as <a href="#commandline">specified above</a>.<p>
 
-<p>The Ant plug-in task has additional capabilities not provided with the command line tool: before the WADL file is processed it compares the modification dates of <code><i>file.wadl</i></code> and any file listed in a child <code>&lt;depends&gt;</code> element to the modification dates of any files listed in a child <code>&lt;produces&gt;</code> element. If any of the former are more recent that the oldest of the latter then <code><i>file.wadl</i></code> is processed, otherwise processing is skipped, this means that the tool will only run when its deemed necessary. In the example above, the tool will only run when the WADL file, one of the imported schemas, the build script or the <code>wadl2java</code> tool is modified.</p>
+<p>The Ant plug-in task has additional capabilities not provided with the command line tool: before the WADL file is processed it compares the modification dates of <code><i>file.wadl</i></code>, <code><i>package</i></code> and any file listed in a child <code>&lt;depends&gt;</code> element to the modification dates of any files listed in a child <code>&lt;produces&gt;</code> element. If any of the former are more recent that the oldest of the latter then <code><i>file.wadl</i></code> is processed, otherwise processing is skipped, this means that the tool will only run when its deemed necessary. In the example above, the tool will only run when the WADL file, the customization file, one of the imported schemas, the build script or the <code>wadl2java</code> tool is modified.</p>
 </div>
 </body>
 </html>
