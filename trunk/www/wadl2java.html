@@ -17,16 +17,18 @@
 
 <p>Execute the <code>wadl2java</code> tools as follows:</p>
 
-<pre>java -jar wadl2java.jar -o <i>outputDir</i> -p <i>package</i> [-c <i>customization</i>]* <i>file.wadl</i></pre>
+<pre>java -jar wadl2java.jar -o <i>outputDir</i> -p <i>package</i> [-a] [-c <i>customization</i>]* <i>file.wadl</i></pre>
 
 <p>where:</p>
 
 <dl>
-<dt><code><i>outputDir</i></code></dt>
+<dt><code>-o <i>outputDir</i></code></dt>
 <dd>specifies the directory into which generated source code will be written, the directory must already exist</dd>
-<dt><code><i>package</i></code></dt>
+<dt><code>-p <i>package</i></code></dt>
 <dd>specifies the Java package name in which generated code will reside</dd>
-<dt><code><i>customization</i></code></dt>
+<dt><code>-a</code></dt>
+<dd>turns on automatic package name generation for schema files. If not specified, all generated code goes into <code><i>package</i></code>. If specified, each schema namespace name is mapped to a package name and classes generated for elements and types in that namespace are generated in their own package</dd>
+<dt><code>-c <i>customization</i></code></dt>
 <dd>is the path or URL of a JAXB binding customization file (zero or more customization files can be specified)</dd>
 <dt><code><i>file.wadl</i></code></dt>
 <dd>is the path or URL of the WADL file to process</dd>
@@ -56,7 +58,8 @@
 
 &lt;target name="-pre-compile"&gt;
   &lt;echo message="Compiling the description..." /&gt;
-  &lt;wjc description="<i>file.wadl</i>" package="<i>package</i>" target="<i>outputDir</i>"&gt;
+  &lt;wjc description="<i>file.wadl</i>" package="<i>package</i>"
+      autoSchemaPackage="<i>true|false</i>" target="<i>outputDir</i>"&gt;
     &lt;customizations dir="<i>.</i>" includes="<i>customization</i>" /&gt;
     &lt;produces dir="<i>outputDir</i>" includes="**/*.java" /&gt;
     &lt;depends dir="." includes="*.xsd"/&gt;
