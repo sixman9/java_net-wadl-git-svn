@@ -1,0 +1,51 @@
+</dd>
+<script>document.getElementById("main").parentNode.style.display="none";</script>
+<dd id=menubar>
+<ul>
+	<li>
+		<a href="/servlets/ProjectDocumentList?folderID=7152&expandFolder=7152&folderID=0">Downloads</a>
+	<li><a href="#">Documents</a>
+	<ul>
+		<li><a href="/wadl2java.html">User Guide</a>
+	</ul>
+	<li>
+		<a href="/servlets/ProjectNewsList">Announcements</a>
+	<li>
+		<a href="/servlets/ProjectMemberList">Membership</a>
+	<li>
+		<a href="/servlets/ProjectMailingListList">Mailing lists</a>
+	<li>
+		<a href="/servlets/ProjectIssues">Issue tracker</a>
+  <li>
+<form action="https://wadl.dev.java.net/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="https://wadl.dev.java.net/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>	<li>
+		<a href="/source/browse/wadl/" match="/source/browse/xsom/.*">Subversion</a>
+</ul>
+
+<script>
+var info = {
+	title: "Web Application Description Language"
+}
+</script>
+<script src="https://glassfish-theme.dev.java.net/zone-ws.js"></script>
+<script src="https://glassfish-theme.dev.java.net/theme.js"></script>
