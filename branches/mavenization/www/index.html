@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Web Application Description Language (WADL) - Specification and Tools</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+div.title{color:#ED9B09;font-weight:bold;padding:8px 8px 2px 8px}
+div.e8v1{background:url("http://developers.sun.com/css/im/bg_dksunblue.gif") repeat-x left bottom #35556B;margin-bottom:10px;width:170px}
+div.copy{color:#FFF;padding:2px 8px 4px 8px}</pre>
+</style>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<p>Welcome to the Web Application Description Language (WADL) project at Java.net. This project is under the <a href="http://www.opensource.org/licenses/cddl1.php">CDDL license</a>. Here you'll find the <a href="#spec">language specification</a> and tools for working with WADL descriptions of Web applications.</p>
+
+<h2>Project Contents</h2>
+
+<dl>
+<dt><code>wadl2java</code></dt><dd>A tool that generates client side stubs from WADL files. May be used from the command line or as an Apache Ant plug-in, see the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for full details.</dd>
+<dt><code>wadl2java_yahoo</code></dt><dd>A sample project that uses the <code>wadl2java</code> tool to create stubs for the <a href="http://developer.yahoo.com/search/news/V1/newsSearch.html">Yahoo News Search Service</a>. Includes a simple <code>main</code> method that uses the generated stubs to query for the latest Java news.</dd>
+</dl>
+
+<h3>Other Resources</h3>
+<dl>
+<dt><code>wadl_documentation.xsl</code></dt><dd>Mark Nottingham maintains an <a href="http://www.mnot.net/webdesc/">XSLT stylesheet</a> that will transform a WADL document into a human-readable documentation.</dd>
+</dl>
+
+<h2 id="wadlgoals">Project Goals</h2>
+
+<p>This project aims to accomplish the following:</p>
+
+<ul>
+<li>Improve the existing <code>wadl2java</code> tool</li>
+<li>Collect a library of WADL files for existing Web applications, these will serve to:
+<ul>
+<li>Demonstrate the use of WADL to describe existing services</li>
+<li>Provide test files for WADL tools</li>
+</ul></li>
+<li>Add new tools for languages other than Java</li>
+<li>Add new tools for developing server-side code from WADL descriptions</li>
+<li>Add new tools for creating WADL descriptions of deployed services</li>
+<li>Integration of existing and new tools into IDEs and application servers to simplify their use</li>
+</ul>
+
+<h2 id="wadlcontrib">Contributing to the Project</h2>
+
+<p>Contributions are welcome in the following areas:</p>
+
+<ul>
+<li>Suggestions for improvements to the current tools. These can be in the form of:
+<ul>
+<li>Bug reports</li>
+<li>Feature requests</li>
+<li>Source code patches</li>
+</ul></li>
+<li>Suggestions for improvements to the WADL specification</li>
+<li>Submission of WADL files for existing Web applications</li>
+<li>Submission of new tools</li>
+<li>Documentation or tutorials on the use of WADL or the tools under development here.</li>
+</ul>
+
+<h2 id="spec">WADL Specification</h2>
+
+<p>History (current specification at top):</p>
+
+<ul>
+<li>20061109 - <a href="wadl20061109.pdf">Specification</a> (PDF), <a href="wadl20061109.rnc">RelaxNG schema</a> and <a href="wadl20061109.xsd">W3C XML schema</a>. Updated with support for resource type and numerous fixes and clarifications, more <a href="https://wadl.dev.java.net/servlets/NewsItemView?newsItemID=4364">information here</a>.</li>
+<li>20060802 - <a href="wadl20060802.pdf">Specification</a> (PDF), <a href="wadl20060802.rnc">RelaxNG schema</a> and <a href="wadl20060802.xsd">W3C XML schema</a>. Updated with support for describing links from representations to resources, including human-readable documentation and reworked resource and parameter description, see <a href="http://weblogs.java.net/blog/mhadley/archive/2006/08/wadl_revision_1.html">Marc's blog entry for details</a>.</li>
+<li>20060424 - <a href="http://research.sun.com/techrep/2006/abstract-153.html">Sun Labs Technical Report</a>
+<li>20051116 - <a href="wadl20051116.pdf">Initial draft</a> (PDF)
+</ul>
+
+<h2 id="wadlbuild">Project Build Instructions</h2>
+
+
+<div style="float:right" align="center">
+	<div class="e8img">
+		<a href="http://developers.sun.com/web/swdp/index.jsp"><img src="http://www.sun.com/images/e8/e8_swdp.jpg" width="170" height="100" border="0" alt="ajax"></a>
+    </div>
+	<div class="e8v1">
+		<div class="title">
+			Get the Sun Web Developer Pack
+		</div>
+		<div class="copy">
+			Simplify development of your Web 2.0 applications with this <a href="http://developers.sun.com/web/swdp/index.jsp">all-in-one download</a>. 
+		</div>
+		<div class="copy">
+			<a href="http://developers.sun.com/web/swdp/index.jsp">&raquo;&nbsp;Learn More</a>
+		</div>
+	</div>
+	<a href="http://netbeans.org"><img src="built-for-netbeans.png" alt="Netbeans" /></a> 
+</div>
+
+<p>You need Apache Ant 1.6 or later to build the code contained within this project. Java SE 5 or later is required. First check out the workspace:</p>
+
+<pre>$ svn checkout https://wadl.dev.java.net/svn/wadl/trunk/source wadl --username <i>yourid</i></pre>
+
+<p>where <i>yourid</i> is your <a href="https://www.dev.java.net/servlets/Join">java.net user id</a>.</p>
+
+<p>Go to the <code>wadl4java</code> directory and build the project:</p>
+
+<pre>$ cd wadl/wadl2java
+$ ant jar</pre>
+
+<p>The project also comes with <a href="http://www.netbeans.org/">NetBeans</a> project files, if you use other IDEs, please contribute the project settings to us.</p>
+
+<p>Once built, you can test using a sample project:</p>
+
+<pre>$ cd ../wadl2java_yahoo
+$ ant run</pre>
+
+<p>You should see a list of recent news stories related to Java. See the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for a description of how to use the tool within a project and examine the <code>build.xml</code> file for an example of using the <code>wadl2java</code> Ant task.</p>
+
+</body>
+</html>
+
