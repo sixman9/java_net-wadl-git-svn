@@ -17,8 +17,10 @@ div.copy{color:#FFF;padding:2px 8px 4px 8px}</pre>
 <h2>Project Contents</h2>
 
 <dl>
-<dt><code>wadl2java</code></dt><dd>A tool that generates client side stubs from WADL files. May be used from the command line or as an Apache Ant plug-in, see the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for full details.</dd>
-<dt><code>wadl2java_yahoo</code></dt><dd>A sample project that uses the <code>wadl2java</code> tool to create stubs for the <a href="http://developer.yahoo.com/search/news/V1/newsSearch.html">Yahoo News Search Service</a>. Includes a simple <code>main</code> method that uses the generated stubs to query for the latest Java news.</dd>
+<dt><code>wadl-cmdline</code></dt><dd>A command line tool that generates client side stubs from WADL files, see the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for full details.</dd>
+<dt><code>wadl-ant</code></dt><dd>An Ant plug-in that generates client side stubs from WADL files, see the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for full details.</dd>
+<dt><code>wadl-maven-plugin</code></dt><dd>A Maven plug-in that generates client side stubs from WADL files, see the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for full details.</dd>
+<dt><code>wadl-dist</code></dt><dd>Sample projects that demostrate use of the <code>wadl2java</code> tools to create stubs for the <a href="http://developer.yahoo.com/search/news/V1/newsSearch.html">Yahoo News Search Service</a>.</dd>
 </dl>
 
 <h3>Other Resources</h3>
@@ -75,42 +77,25 @@ div.copy{color:#FFF;padding:2px 8px 4px 8px}</pre>
 
 
 <div style="float:right" align="center">
-	<div class="e8img">
-		<a href="http://developers.sun.com/web/swdp/index.jsp"><img src="http://www.sun.com/images/e8/e8_swdp.jpg" width="170" height="100" border="0" alt="ajax"></a>
-    </div>
-	<div class="e8v1">
-		<div class="title">
-			Get the Sun Web Developer Pack
-		</div>
-		<div class="copy">
-			Simplify development of your Web 2.0 applications with this <a href="http://developers.sun.com/web/swdp/index.jsp">all-in-one download</a>. 
-		</div>
-		<div class="copy">
-			<a href="http://developers.sun.com/web/swdp/index.jsp">&raquo;&nbsp;Learn More</a>
-		</div>
-	</div>
 	<a href="http://netbeans.org"><img src="built-for-netbeans.png" alt="Netbeans" /></a> 
 </div>
 
-<p>You need Apache Ant 1.6 or later to build the code contained within this project. Java SE 5 or later is required. First check out the workspace:</p>
+<p>You need Maven 2 to build the code contained within this project. Java SE 5 or later is required. First check out the workspace:</p>
 
 <pre>$ svn checkout https://wadl.dev.java.net/svn/wadl/trunk/source wadl --username <i>yourid</i></pre>
 
 <p>where <i>yourid</i> is your <a href="https://www.dev.java.net/servlets/Join">java.net user id</a>.</p>
 
-<p>Go to the <code>wadl4java</code> directory and build the project:</p>
+<p>Go to the project root directory and build the project:</p>
 
-<pre>$ cd wadl/wadl2java
-$ ant jar</pre>
+<pre>$ cd wadl
+$ mvn package</pre>
 
-<p>The project also comes with <a href="http://www.netbeans.org/">NetBeans</a> project files, if you use other IDEs, please contribute the project settings to us.</p>
+<p>The complete distribution will be built in:</p>
 
-<p>Once built, you can test using a sample project:</p>
+<pre>wadl-dist/target/wadl-dist-1.0-SNAPSHOT-bin.zip</pre>
 
-<pre>$ cd ../wadl2java_yahoo
-$ ant run</pre>
-
-<p>You should see a list of recent news stories related to Java. See the <a href="wadl2java.html"><code>wadl2java</code> documentation</a> for a description of how to use the tool within a project and examine the <code>build.xml</code> file for an example of using the <code>wadl2java</code> Ant task.</p>
+<p>After unpacking the distribution, see the content of the <code>samples</code> directory for examples of how to use <code>wadl2java</code> from the command line, from Ant and from Maven.</p>
 
 </body>
 </html>
