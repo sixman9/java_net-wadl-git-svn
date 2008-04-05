@@ -1,0 +1,23 @@
+-classpath '/home/wilfred/workspace/wadl/wadl-ant/target/classes:/home/wilfred/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/wilfred/.m2/repository/javax/xml/bind/jsr173_api/1.0/jsr173_api-1.0.jar:/home/wilfred/.m2/repository/com/sun/localizer/localizer/1.0/localizer-1.0.jar:/home/wilfred/.m2/repository/com/sun/xml/bind/jaxb-impl/2.0.3/jaxb-impl-2.0.3.jar:/home/wilfred/.m2/repository/javax/xml/bind/jaxb-api/2.0/jaxb-api-2.0.jar:/home/wilfred/.m2/repository/com/sun/xml/bind/jaxb-xjc/2.0.3/jaxb-xjc-2.0.3.jar:/home/wilfred/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar:/home/wilfred/.m2/repository/org/jvnet/ws/wadl/wadl-core/1.0-SNAPSHOT/wadl-core-1.0-SNAPSHOT.jar:/home/wilfred/.m2/repository/com/sun/localizer/comresrcgen/1.0/comresrcgen-1.0.jar'
+ -encoding
+'ISO-8859-1'
+-protected
+-sourcepath
+'/home/wilfred/workspace/wadl/wadl-ant/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2008. All Rights Reserved.'
+-charset
+'ISO-8859-1'
+-d
+'/home/wilfred/workspace/wadl/wadl-ant/target/site/apidocs'
+-doctitle
+'WADL Ant Task 1.0-SNAPSHOT API'
+-linkoffline
+'http://wadl.dev.java.net/wadl-core/apidocs' '/home/wilfred/workspace/wadl/wadl-core/target/site/apidocs'
+-linkoffline
+'http://wadl.dev.java.net/wadl-maven-plugin/apidocs' '/home/wilfred/workspace/wadl/wadl-maven-plugin/target/site/apidocs'
+-use
+-version
+-windowtitle
+'WADL Ant Task 1.0-SNAPSHOT API'

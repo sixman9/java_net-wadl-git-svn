@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>WADL Ant Task - Reactor Dependency Convergence</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            WADL Ant Task
+    
+            </span>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 2008-04-05
+                      </div>
+            <div class="xright">            <a href="">WADL Ant Task</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+    
+                             <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+            
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+                    <a href="project-info.html">Project Information</a>
+                  <ul>
+                  
+    <li class="none">
+                    <a href="index.html">About</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="integration.html">Continuous Integration</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="dependencies.html">Dependencies</a>
+          </li>
+                  
+    <li class="none">
+              <strong>Dependency Convergence</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="issue-tracking.html">Issue Tracking</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="mail-lists.html">Mailing Lists</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="license.html">Project License</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="project-summary.html">Project Summary</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="team-list.html">Project Team</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="source-repository.html">Source Repository</a>
+          </li>
+              </ul>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-reports.html">Project Reports</a>
+                </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>Reactor Dependency Convergence</h2>
+<table class="bodyTable"><caption>Legend:</caption>
+<tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td>All projects share one version of the dependency.</td>
+</tr>
+<tr class="b"><td><img alt="error" src="images/icon_error_sml.gif" /></td>
+<td>At least one project has a differing version of the dependency.</td>
+</tr>
+</table>
+<table class="bodyTable"><caption>Statistics</caption>
+<tr class="a"><th>Number of sub-projects:</th>
+<td>6</td>
+</tr>
+<tr class="b"><th>Number of dependencies (NOD):</th>
+<td>16</td>
+</tr>
+<tr class="a"><th>Number of unique artifacts (NOA):</th>
+<td>16</td>
+</tr>
+<tr class="b"><th>Number of SNAPSHOT artifacts (NOS):</th>
+<td>3</td>
+</tr>
+<tr class="a"><th>Convergence (NOD/NOA):</th>
+<td><img alt="success" src="images/icon_success_sml.gif" />&#160;<b>100%</b>
+</td>
+</tr>
+<tr class="b"><th>Ready for Release (100% Convergence and no SNAPSHOTS):</th>
+<td><img alt="error" src="images/icon_error_sml.gif" />&#160;<b>Error</b>
+<br />
+You have SNAPSHOT dependencies.</td>
+</tr>
+</table>
+Dependencies used in sub-projects<div class="section"><h3>ant:ant</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.6.5</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-ant" class="externalLink">org.jvnet.ws.wadl:wadl-ant</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>com.sun.localizer:comresrcgen</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.0</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-core" class="externalLink">org.jvnet.ws.wadl:wadl-core</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>com.sun.localizer:localizer</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.0</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-core" class="externalLink">org.jvnet.ws.wadl:wadl-core</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>com.sun.xml.bind:jaxb-impl</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>2.0.3</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-core" class="externalLink">org.jvnet.ws.wadl:wadl-core</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>com.sun.xml.bind:jaxb-xjc</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>2.0.3</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-core" class="externalLink">org.jvnet.ws.wadl:wadl-core</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>javax.activation:activation</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.1</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-core" class="externalLink">org.jvnet.ws.wadl:wadl-core</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>javax.xml.bind:jaxb-api</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>2.0</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-core" class="externalLink">org.jvnet.ws.wadl:wadl-core</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>junit:junit</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>3.8.1</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-core" class="externalLink">org.jvnet.ws.wadl:wadl-core</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.apache.maven.shared:maven-plugin-testing-harness</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.0-beta-1</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-maven-plugin" class="externalLink">org.jvnet.ws.wadl:wadl-maven-plugin</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.apache.maven:maven-plugin-api</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>2.0</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-maven-plugin" class="externalLink">org.jvnet.ws.wadl:wadl-maven-plugin</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.apache.maven:maven-project</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>2.0</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-maven-plugin" class="externalLink">org.jvnet.ws.wadl:wadl-maven-plugin</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.easymock:easymockclassextension</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>2.2</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-maven-plugin" class="externalLink">org.jvnet.ws.wadl:wadl-maven-plugin</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.hamcrest:hamcrest-all</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.1</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-maven-plugin" class="externalLink">org.jvnet.ws.wadl:wadl-maven-plugin</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.jvnet.ws.wadl:wadl-ant</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.0-SNAPSHOT</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-dist" class="externalLink">org.jvnet.ws.wadl:wadl-dist</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.jvnet.ws.wadl:wadl-cmdline</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.0-SNAPSHOT</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-dist" class="externalLink">org.jvnet.ws.wadl:wadl-dist</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>org.jvnet.ws.wadl:wadl-core</h3>
+<table class="bodyTable"><tr class="a"><td><img alt="success" src="images/icon_success_sml.gif" /></td>
+<td><table class="bodyTable"><tr class="b"><td>1.0-SNAPSHOT</td>
+<td><ol type="a"><li><a href="http://wadl.dev.java.net/wadl-ant" class="externalLink">org.jvnet.ws.wadl:wadl-ant</a>
+</li>
+<li><a href="http://wadl.dev.java.net/wadl-cmdline" class="externalLink">org.jvnet.ws.wadl:wadl-cmdline</a>
+</li>
+<li><a href="http://wadl.dev.java.net/wadl-dist" class="externalLink">org.jvnet.ws.wadl:wadl-dist</a>
+</li>
+<li><a href="http://wadl.dev.java.net/wadl-maven-plugin" class="externalLink">org.jvnet.ws.wadl:wadl-maven-plugin</a>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2008
+    
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>
