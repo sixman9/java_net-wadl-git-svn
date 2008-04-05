@@ -1,0 +1,4 @@
+org.jvnet.ws.wadl
+org.jvnet.ws.wadl.util
+org.jvnet.ws.wadl2java
+org.jvnet.ws.wadl2java.ast
