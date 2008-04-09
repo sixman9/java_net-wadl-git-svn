@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <groupId>org.jvnet.ws.wadl</groupId>
+  <artifactId>wadl-dist</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20080409.082608</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20080409084501</lastUpdated>
+  </versioning>
+</metadata>
