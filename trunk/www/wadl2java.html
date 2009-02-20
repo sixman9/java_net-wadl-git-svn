@@ -75,15 +75,69 @@
 
 <h2 id="maven">Maven Plug-in Usage</h2>
 
-<p>Use the maven plug-in as follows:</p>
+<p>In order to use the Maven support, you first of all need to tell
+  Maven about a couple of additional Maven repositories; otherwise it
+  won't be able to automatically download the plugin and its
+  dependencies.</p>
+
+<p>Once you have done that, generating sources from a WADL file is as
+  easy as calling <code>mvn wadl:generate</code>. By default, it will
+  expect the WADL files to reside in <code>src/main/wadl</code>, but
+  this is one of the properties you can override.</p>
+
+<p>Note that the plugin <em>will</em> automatically register the
+  generated sources to be included in the compilation phase. So, if
+  you register the plugin for the <code>generate-sources</code> phase
+  (as in the example below), then the only thing you have to do is
+  call <code>mvn compile</code>; this will generate the sources and
+  compile them in a single pass.</p>
+
+<p>Find a sample configuration below. Note that this example is part
+  of the distribution.</p>
 
 <pre>&lt;?xml version="1.0"?&gt;
 &lt;project&gt;
   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
   &lt;groupId&gt;com.yahoo.search&lt;/groupId&gt;
   &lt;artifactId&gt;search-api&lt;/artifactId&gt;
-  &lt;version&gt;SNAPSHOT&lt;/version&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
   &lt;name&gt;Yahoo Search API&lt;/name&gt;
+  &lt;repositories&gt;
+    &lt;repository&gt;
+      &lt;id&gt;wadl-repository&lt;/id&gt;
+      &lt;name&gt;WADL Maven Repository&lt;/name&gt;
+      &lt;url&gt;https://wadl.dev.java.net/nonav/repository/&lt;/url&gt;
+    &lt;/repository&gt;
+    &lt;repository&gt;
+      &lt;id&gt;maven2-repository.dev.java.net&lt;/id&gt;
+      &lt;name&gt;Java.net Repository for Maven&lt;/name&gt;
+      &lt;url&gt;http://download.java.net/maven/2/&lt;/url&gt;
+    &lt;/repository&gt;
+    &lt;repository&gt;
+      &lt;id&gt;wadl-snapshots&lt;/id&gt;
+      &lt;name&gt;WADL Snapshots Repository&lt;/name&gt;
+      &lt;url&gt;https://wadl.dev.java.net/nonav/snapshots&lt;/url&gt;
+      &lt;snapshots&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+      &lt;/snapshots&gt;
+      &lt;releases&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+      &lt;/releases&gt;
+    &lt;/repository&gt;
+  &lt;/repositories&gt;
+  &lt;pluginRepositories&gt;
+    &lt;pluginRepository&gt;
+      &lt;id&gt;wadl-snapshots&lt;/id&gt;
+      &lt;name&gt;WADL Snapshots Repository&lt;/name&gt;
+      &lt;url&gt;https://wadl.dev.java.net/nonav/snapshots&lt;/url&gt;
+      &lt;snapshots&gt;
+        &lt;enabled&gt;true&lt;/enabled&gt;
+      &lt;/snapshots&gt;
+      &lt;releases&gt;
+        &lt;enabled&gt;false&lt;/enabled&gt;
+      &lt;/releases&gt;
+    &lt;/pluginRepository&gt;
+  &lt;/pluginRepositories&gt;
   &lt;dependencies&gt;
     &lt;dependency&gt;
       &lt;groupId&gt;org.jvnet.ws.wadl&lt;/groupId&gt;
