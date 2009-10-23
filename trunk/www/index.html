@@ -12,9 +12,21 @@ div.copy{color:#FFF;padding:2px 8px 4px 8px}</pre>
 
 <body bgcolor="#FFFFFF" text="#000000">
 
-<p>Welcome to the Web Application Description Language (WADL) project at Java.net. This project is under the <a href="http://www.opensource.org/licenses/cddl1.php">CDDL license</a>. Here you'll find the <a href="#spec">language specification</a> and tools for working with WADL descriptions of Web applications.</p>
+<p>Welcome to the Web Application Description Language (WADL) project at Java.net. This project is under the <a href="http://www.opensource.org/licenses/cddl1.php">CDDL license</a>. Here you'll find the language specification and tools for working with WADL descriptions of Web applications.</p>
 
-<h2>Project Contents</h2>
+<h2 id="spec">WADL Specification</h2>
+
+<p>History (current specification at top):</p>
+
+<ul>
+<li>20090831 - <a href="http://www.w3.org/Submission/wadl/">Specification</a>, <a href="http://www.w3.org/Submission/wadl/wadl.rnc">RelaxNG schema</a> and <a href="http://www.w3.org/Submission/wadl/wadl.xsd">W3C XML schema</a>. Refactored description of responses and several other issue fixes, more <a href="http://weblogs.java.net/blog/2009/02/03/draft-wadl-update">information here</a>.</li>
+<li>20061109 - <a href="wadl20061109.pdf">Specification</a> (PDF), <a href="wadl20061109.rnc">RelaxNG schema</a> and <a href="wadl20061109.xsd">W3C XML schema</a>. Updated with support for resource type and numerous fixes and clarifications, more <a href="https://wadl.dev.java.net/servlets/NewsItemView?newsItemID=4364">information here</a>.</li>
+<li>20060802 - <a href="wadl20060802.pdf">Specification</a> (PDF), <a href="wadl20060802.rnc">RelaxNG schema</a> and <a href="wadl20060802.xsd">W3C XML schema</a>. Updated with support for describing links from representations to resources, including human-readable documentation and reworked resource and parameter description, see <a href="http://weblogs.java.net/blog/mhadley/archive/2006/08/wadl_revision_1.html">Marc's blog entry for details</a>.</li>
+<li>20060424 - <a href="http://research.sun.com/techrep/2006/abstract-153.html">Sun Labs Technical Report</a>
+<li>20051116 - <a href="wadl20051116.pdf">Initial draft</a> (PDF)
+</ul>
+
+<h2>wadl2java</h2>
 
 <p>The latest distribution can be downloaded <a href="https://wadl.dev.java.net/servlets/ProjectDocumentList?folderID=7152&expandFolder=7152&folderID=0">here</a>.</p>
 
@@ -26,27 +38,10 @@ div.copy{color:#FFF;padding:2px 8px 4px 8px}</pre>
 <dt><code>wadl-dist</code></dt><dd>Sample projects that demostrate use of the <code>wadl2java</code> tools to create stubs for the <a href="http://developer.yahoo.com/search/news/V1/newsSearch.html">Yahoo News Search Service</a>.</dd>
 </dl>
 
-<h3>Other Resources</h3>
+<h2>Other Resources</h2>
 <dl>
 <dt><code>wadl_documentation.xsl</code></dt><dd>Mark Nottingham has created a <a href="http://github.com/mnot/wadl_stylesheets/tree/master">project to develop XSLT stylesheets</a> to transform WADL documents into human-readable documentation.</dd>
 </dl>
-
-<h2 id="wadlgoals">Project Goals</h2>
-
-<p>This project aims to accomplish the following:</p>
-
-<ul>
-<li>Improve the existing <code>wadl2java</code> tool</li>
-<li>Collect a library of WADL files for existing Web applications, these will serve to:
-<ul>
-<li>Demonstrate the use of WADL to describe existing services</li>
-<li>Provide test files for WADL tools</li>
-</ul></li>
-<li>Add new tools for languages other than Java</li>
-<li>Add new tools for developing server-side code from WADL descriptions</li>
-<li>Add new tools for creating WADL descriptions of deployed services</li>
-<li>Integration of existing and new tools into IDEs and application servers to simplify their use</li>
-</ul>
 
 <h2 id="wadlcontrib">Contributing to the Project</h2>
 
@@ -63,17 +58,6 @@ div.copy{color:#FFF;padding:2px 8px 4px 8px}</pre>
 <li>Submission of WADL files for existing Web applications</li>
 <li>Submission of new tools</li>
 <li>Documentation or tutorials on the use of WADL or the tools under development here.</li>
-</ul>
-
-<h2 id="spec">WADL Specification</h2>
-
-<p>History (current specification at top):</p>
-
-<ul>
-<li>20061109 - <a href="wadl20061109.pdf">Specification</a> (PDF), <a href="wadl20061109.rnc">RelaxNG schema</a> and <a href="wadl20061109.xsd">W3C XML schema</a>. Updated with support for resource type and numerous fixes and clarifications, more <a href="https://wadl.dev.java.net/servlets/NewsItemView?newsItemID=4364">information here</a>.</li>
-<li>20060802 - <a href="wadl20060802.pdf">Specification</a> (PDF), <a href="wadl20060802.rnc">RelaxNG schema</a> and <a href="wadl20060802.xsd">W3C XML schema</a>. Updated with support for describing links from representations to resources, including human-readable documentation and reworked resource and parameter description, see <a href="http://weblogs.java.net/blog/mhadley/archive/2006/08/wadl_revision_1.html">Marc's blog entry for details</a>.</li>
-<li>20060424 - <a href="http://research.sun.com/techrep/2006/abstract-153.html">Sun Labs Technical Report</a>
-<li>20051116 - <a href="wadl20051116.pdf">Initial draft</a> (PDF)
 </ul>
 
 <h2 id="wadlbuild">Project Build Instructions</h2>
