@@ -1,0 +1,48 @@
+    <script>
+        var info = {
+	title: "WADL",
+        }
+    </script>
+
+	  <div id="navcol">
+	    <dl id="projecttools" class="navgroup" style="text-align: left;">
+	      <dt id="current-zone" class="depth0">
+		<a href="http://glassfish.java.net/">GlassFish Community</a>
+	      </dt>
+	      <dd class="depth0 parent parent" id="menubar">
+<ul id="main-menubar">
+    <li>
+      <a href="http://java.net/projects/wadl/lists">Mailing lists</a>
+    <li>
+        <a href="http://java.net/projects/wadl/roles">Membership</a>
+    <li>
+	<a href="http://java.net/projects/wadl/sources/svn/show/" match="http://java.net/projects/wadl/sources/svn/show/.*">Subversion repository</a>
+    <li>
+        <a href="http://java.net/jira/browse/WADL/">IssueTracker</a>
+</ul>
+
+<script>
+var info = {
+	title: "WADL",
+}
+</script>
+<script src="http://glassfish-theming.java.net/zone-webtier.js"></script>
+<script src="http://glassfish-theming.java.net/theme.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3160303-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- **************** -->
+
